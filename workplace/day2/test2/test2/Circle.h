@@ -1,23 +1,24 @@
 //
 //  Circle.h
-//  day1
+//  test2
 //
-//  Created by fengzhengtao on 2019/12/10.
+//  Created by fengzhengtao on 2019/12/11.
 //  Copyright © 2019 fengzhengtao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Mypoint.h"
-#import <UIKit/UIKit.h>
 #define PI 3.14
+@class Mypoint;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Circle : Mypoint{
+@interface Circle : NSObject{
+    Mypoint* _orgin;
     double _r;
 }
 @property double r;
--(BOOL)inside:(Mypoint*)p;
+@property Mypoint* orgin;
 -(instancetype)initWithR:(double)r;
+-(BOOL)isinde:(Mypoint*)p;
 @end
 
 NS_ASSUME_NONNULL_END
